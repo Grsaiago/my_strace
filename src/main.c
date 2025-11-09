@@ -78,9 +78,7 @@ int start_traced_process(char *cmd) {
 				printf("rolou a syscall %lld\n", registers.orig_rax);
 				break;
 			case (EXIT):
-				printf(
-				    "rolou a syscall %lld\n", registers.rax
-				);
+				printf("rolou a syscall %lld\n", registers.rax);
 				break;
 			}
 			syscall_state ^= 1; // toggle state so it reads in/out alternate
